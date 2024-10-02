@@ -1,27 +1,28 @@
-# WeatherApp
+# Angular Weather Application
 
+This is an Angular project that displays weather information. It uses the [Weather API] to fetch and display current weather conditions, forecasts, and other relevant weather data.
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.2.2.
 
-## Development server
+## Prerequisites
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Make sure you have the following tools installed:
 
-## Code scaffolding
+- [Node.js](https://nodejs.org/) (version 12 or higher)
+- [Angular CLI](https://angular.io/cli) (version 10 or higher)
+- [Git](https://git-scm.com/)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+1. Clone the repository: https://github.com/danielsimoes1996/weather_app.git
+2. Install the dependencies: npm install
+3. Run command ng serve
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Here is a brief overview of the project structure:
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+src/app: Contains the main components of the project.
+components: Contains reusable components.
+services: Contains services used for business logic and API communication.
+shared: Contains shared components.
+models: Contains type definitions and interfaces.
+pages: Contains page components like Home and Settings.
+src/assets: Contains static assets like images and CSS files.
+src/environments: Contains environment-specific settings.
