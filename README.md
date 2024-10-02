@@ -7,8 +7,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Make sure you have the following tools installed:
 
-- [Node.js](https://nodejs.org/) (version 12 or higher)
-- [Angular CLI](https://angular.io/cli) (version 10 or higher)
+- [Node.js](https://nodejs.org/)
+- [Angular CLI](https://angular.io/cli)
 - [Git](https://git-scm.com/)
 
 1. Clone the repository: https://github.com/danielsimoes1996/weather_app.git
