@@ -1,0 +1,14 @@
+<form [formGroup]="searchForm" (ngSubmit)="onSubmit()">
+    <div class="search-bar">
+        <input type="text" placeholder="Search for cities" class="search-input" formControlName="city" required list="datalist"/>
+        <button type="submit" *ngIf="!isLoading" class="search-btn" [disabled]="searchForm.invalid"><i class="bi bi-search"></i></button>
+
+        <div *ngIf="isLoading" class="spinner-border" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+
+        <ul class="list-group mt-2" *ngIf="!isLoading && locationsSearch && locationsSearch.location.address && locationsSearch.location.address.length > 1">
+            <li class="list-group-item" *ngFor="let address of locationsSearch.location.address; let i = index" (click)="selectLocation(i)">{{ address }}</li>
+        </ul>
+    </div>
+</form>

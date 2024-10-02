@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="row">
+        <ng-container *ngIf="currentWeather">
+            <div class="col-md-8">
+                <h1 class="city_title">{{this.currentWeather.location}}</h1>
+                <span><b>{{this.currentWeather.day}},</b> {{ currentDate | date:'HH:mm' }}</span>
+                <div class="mt-4">
+                    <h2 class="temp_title">
+                        {{this.metricsConversionService.celsios ? this.currentWeather.temperature : this.metricsConversionService.celsiosToFahrenheit(this.currentWeather.temperature)}} 
+                        {{this.metricsConversionService.celsios == true ? "°C" : "°F"}}</h2>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="row h-100 justify-content-center align-items-center">
+                    <div class="col-auto">
+                        <img [src]="'assets/' + this.currentWeather.image" class="main_img"> 
+                    </div>
+                </div>
+            </div>
+        </ng-container>
+    </div>
+</div>

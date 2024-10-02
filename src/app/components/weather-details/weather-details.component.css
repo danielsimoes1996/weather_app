@@ -1,0 +1,28 @@
+.condition-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+.condition-icon {
+    font-size: 1.2rem;
+    margin-right: 10px;
+    color: #90a4ae;
+}
+.condition-label {
+    flex-grow: 1;
+    font-size: 0.9rem;
+    color: #90a4ae;
+}
+.condition-value {
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info-description{
+    font-size: 0.8rem;
+    margin-left: 5px;
+}

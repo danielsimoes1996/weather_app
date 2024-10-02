@@ -1,0 +1,38 @@
+<div class="mt-4">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="container">
+                <h5>Units</h5>
+                <div class="card_container">
+                    <div class="row">
+                        <div class="col-12 mb-3">
+                            <h5 class="card_title">Temperature</h5>
+                        </div>
+                    </div>
+                    <div class="units-options">
+                        <button class="btn btn-dark col-6" [class.active]="metricsConversionService.celsios" 
+                        (click)="this.metricsConversionService.changeTempratureMetrics('celsios')">celsios</button>
+                        <button class="btn btn-dark col-6" [class.active]="!metricsConversionService.celsios" 
+                        (click)="this.metricsConversionService.changeTempratureMetrics('fahrenheit')">Fahrenheit</button>
+                    </div>
+                </div>
+                <div class="card_container mt-4">
+                    <div class="row">
+                        <div class="col-12 mb-3">
+                            <h5 class="card_title">Distance</h5>
+                        </div>
+                    </div>
+                    <div class="units-options">
+                        <button class="btn btn-dark col-6" [class.active]="metricsConversionService.kms" 
+                        (click)="this.metricsConversionService.changeDistanceMetrics('kms')">Kilometers</button>
+                        <button class="btn btn-dark col-6" [class.active]="!metricsConversionService.kms" 
+                        (click)="this.metricsConversionService.changeDistanceMetrics('miles')">Miles</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+
+        </div>
+    </div>
+</div>

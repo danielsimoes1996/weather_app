@@ -1,0 +1,73 @@
+<div class="container mt-4">
+    <div class="card_container p-3">
+        <div class="row">
+            <div class="col-12 mb-3">
+                <h5 class="card_title">Air Conditions</h5>
+            </div>
+        </div>
+        <div class="row" *ngIf="airConditions">
+            <div class="col-md-4 col-sm-12">
+                <div class="condition-item">
+                    <span class="condition-icon"><i class="bi bi-thermometer-half"></i></span>
+                    <div class="condition-info">
+                        <div class="condition-label">Real Feel</div>
+                        <div class="condition-value">{{ this.metricsConversionService.celsios ? airConditions.realFeel : this.metricsConversionService.celsiosToFahrenheit(airConditions.realFeel)}}°</div>
+                    </div>
+                </div>
+                <div class="condition-item">
+                    <span class="condition-icon"><i class="bi bi-droplet-fill"></i></span>
+                    <div class="condition-info">
+                        <div class="condition-label">Chance of rain</div>
+                        <div class="condition-value">{{airConditions.chanceOfRain}}%</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-12">
+                <div class="condition-item">
+                    <span class="condition-icon"><i class="bi bi-wind"></i></span>
+                    <div class="condition-info">
+                        <div class="condition-label">Wind</div>
+                        <div class="condition-value">
+                            {{ this.metricsConversionService.kms ? airConditions.wind : (this.metricsConversionService.kmToMiles(airConditions.wind) | number: '1.0-2') }}
+                            {{this.metricsConversionService.kms ? " km/h" : " mph"}}
+                        </div>
+                    </div>
+                </div>
+                <div class="condition-item">
+                    <span class="condition-icon"><i class="bi bi-brightness-high-fill"></i></span>
+                    <div class="condition-info">
+                        <div class="condition-label">UV Index</div>
+                        <div class="condition-value">{{airConditions.uvIndex}}
+                            <span class="info-description"> ({{airConditions.airQualityDescription}})</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-12">
+                <div class="condition-item">
+                    <span class="condition-icon"><i class="bi bi-eyeglasses"></i></span>
+                    <div class="condition-info">
+                        <div class="condition-label">Visibility</div>
+                        <div class="condition-value">
+                            {{ this.metricsConversionService.kms ? airConditions.visibility : (this.metricsConversionService.kmToMiles(airConditions.visibility) | number: '1.0-2') }}
+                            {{this.metricsConversionService.kms ? " km" : " mi"}}</div>
+                    </div>
+                </div>
+                <div class="condition-item">
+                    <span class="condition-icon"><i class="bi bi-lungs-fill"></i></span>
+                    <div class="condition-info">
+                        <div class="condition-label">Air Quality</div>
+                        <div class="condition-value">{{airConditions.airQuality }}
+                            <span class="info-description"> ({{airConditions.airQualityDescription}})</span>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </div>
+
+        <ng-container *ngIf="!airConditions">
+            <div class="no-content-found">
+                Search for a city to get information
+            </div>
+        </ng-container>
+    </div>

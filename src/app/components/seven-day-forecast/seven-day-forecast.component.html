@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="card_container">
+        <div class="row">
+            <div class="col-12 mb-3">
+                <h5 class="card_title">7-Day Forecast</h5>
+            </div>
+        </div>
+        <ng-container *ngIf="weekData.length > 0">
+            <div class="forecast-item" *ngFor="let data of weekData">
+                <div class="forecast-day">{{data.day}}</div>
+                <div cla><img [src]="'assets/' + data.image" class="forecast-icon" width="50"></div>
+                <div class="forecast-desc">{{data.description}}</div>
+                <div class="forecast-temp">{{this.metricsConversionService.celsios ? data.tempMin : this.metricsConversionService.celsiosToFahrenheit(data.tempMin)}}° / {{this.metricsConversionService.celsios ? data.tempMax : this.metricsConversionService.celsiosToFahrenheit(data.tempMax) }}°</div>
+            </div>
+        </ng-container>
+        <ng-container *ngIf="weekData.length == 0">
+            <div class="no-content-found">
+                Search for a city to get information
+            </div>
+        </ng-container>
+    </div>
+</div>

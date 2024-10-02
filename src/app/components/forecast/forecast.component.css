@@ -1,0 +1,16 @@
+.forecast-item {
+    border-right: 1px solid #2c3e50;
+}
+
+.forecast-item:last-child {
+    border-right: none;
+}
+
+.temperature {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.forecast-time {
+    font-size: 0.9rem;
+}

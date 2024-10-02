@@ -1,0 +1,18 @@
+<div class="d-flex flex-row layout">
+    <nav class="d-none d-md-block sidebar">
+        <app-sidebar></app-sidebar>
+    </nav>
+    <div class="container-fluid main-content">
+        <div class="row">
+            <header class="col-md-8">
+                <app-search-bar></app-search-bar>
+            </header>
+            <main class="col-md-12">
+                <router-outlet></router-outlet>
+            </main>
+        </div>
+    </div>
+    <nav class="d-md-none mobile-sidebar">
+        <app-sidebar></app-sidebar>
+      </nav>
+</div>

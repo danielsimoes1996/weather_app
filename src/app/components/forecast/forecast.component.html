@@ -1,0 +1,23 @@
+<div class="container mt-4">
+    <div class="card_container p-3">
+        <div class="row">
+            <div class="col-12 mb-3">
+                <h5 class="card_title">Today's Forecast</h5>
+            </div>
+        </div>
+        <div class="row text-center" *ngIf="forecastData.length > 0">
+            <div class="col forecast-item" *ngFor="let forecast of this.forecastData">
+                <div class="forecast-time">{{forecast.hour | date:'h:mm a' }}</div>
+                <img [src]="'assets/' + forecast.image" width="50">
+                <div class="temperature">
+                    {{this.metricsConversionService.celsios ? forecast.temperature: this.metricsConversionService.celsiosToFahrenheit(forecast.temperature)}}°
+                </div>
+            </div> 
+        </div>
+        <ng-container *ngIf="forecastData.length == 0">
+            <div class="no-content-found">
+                Search for a city to get information
+            </div>
+        </ng-container>
+    </div>
+</div>

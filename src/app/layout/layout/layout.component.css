@@ -1,0 +1,31 @@
+.layout{
+    padding: 20px;
+    height: 100vh;
+}
+
+.sidebar {
+    background-color: #202B3B;
+    border-radius: 20px;
+    margin: 20px 0;
+    width: 85px;
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+}
+
+.mobile-sidebar {
+    left: 0;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    background-color: #343a40;
+    z-index: 1000;
+  }
+  
+  @media (max-width: 767px) {
+    .main-content {
+      margin-bottom: 60px;
+    }
+  }
